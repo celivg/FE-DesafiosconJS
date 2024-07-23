@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Paleta de colores
+            </h2>
+            <div style="display: flex;">
+                <div style="display: flex;flex-direction: column;">
+                    <button id="btn-1" style="background-color: #e53e3e; width:100px;height: 100px" type="button">
+                    </button>
+                    <button id="btn-2" style="background-color: #dd6b20; width:100px;height: 100px" type="button">
+                    </button>
+                    <button id="btn-3" style="background-color: #faf089; width:100px;height: 100px" type="button">
+                    </button>
+                    <button id="btn-4" style="background-color: #48bb78; width:100px;height: 100px" type="button">
+                    </button>
+                    <button id="btn-5" style="background-color: #81e6d9; width:100px;height: 100px" type="button">
+                    </button>
+                    <button id="btn-6" style="background-color: #d53f8c; width:100px;height: 100px" type="button">
+                    </button>
+                </div>
+                <div style="width: 500px;height: 600px">
+                    <div id="caja" style="border:1px solid black;width: 100%;height: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Escríbe aquí tu código
+
+        //Llamamos a los botones y cajas
+        const boton1 = document.getElementById("btn-1")
+        const boton2 = document.getElementById("btn-2");
+        const boton3 = document.getElementById("btn-3");
+        const boton4 = document.getElementById("btn-4");
+        const boton5 = document.getElementById("btn-5");
+        const boton6 = document.getElementById("btn-6");
+
+        let caja = document.getElementById("caja");
+
+        //Agregamos escucha evento a botones
+        boton1.addEventListener('click', function () {
+        colorCaja(caja, "#e53e3e"); //al hacer click se cambia el color de fondo de la caja
+        })
+
+        boton2.addEventListener('click', function () {
+        colorCaja(caja, "#dd6b20");
+        })
+
+        boton3.addEventListener('click', function (){
+        colorCaja(caja, "#faf089");
+        })
+
+        boton4.addEventListener('click', function (){
+        colorCaja(caja, "#48bb78");
+        })
+
+        boton5.addEventListener('click', function (){
+        colorCaja(caja, "#81e6d9");
+        })
+
+        boton6.addEventListener('click', function (){
+        colorCaja(caja, "#d53f8c");
+        })
+
+        // Funcion para que la caja cambie de color (Esta la saque de internet porque no me sirvió lo de setAttribute, pero funciona 🧐☝🏻)
+        function colorCaja(elemento, color) {
+        elemento.style.backgroundColor = color;
+        }
+
+    </script>
+</body>
+
+</html>
+
